@@ -29,12 +29,38 @@ main {
   margin-top: 0;
 }
 
+.experiment-item {
+  background: #1e1e1e;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+button.open-btn {
+  padding: 10px 15px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.open-btn:hover {
+  opacity: 0.9;
+}
+
+button.open-btn.active {
+  background: #e53935;
+}
+
+.viewer {
+  margin-top: 20px;
+}
+
 .responsive-iframe {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  border-radius: 10px;
-  overflow: hidden;
+  padding-top: 56.25%;
 }
 
 .responsive-iframe iframe {

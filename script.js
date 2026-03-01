@@ -9,6 +9,7 @@ fetch(SHEET_URL)
 
     let hasData = false;
     let currentViewer = null; // iframe đang mở
+    let count = 0;
 
     rows.forEach((row) => {
       if (!row.trim()) return;
@@ -20,12 +21,13 @@ fetch(SHEET_URL)
 
       if (active === "TRUE" && iframeUrl) {
         hasData = true;
+        count++;
 
         const item = document.createElement("div");
         item.className = "experiment";
 
         item.innerHTML = `
-          <h2>${title}</h2>
+          <h2>${count}. ${title}</h2>
           <button class="open-btn">Mở thí nghiệm</button>
         `;
 
